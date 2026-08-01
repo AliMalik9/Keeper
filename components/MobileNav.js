@@ -29,10 +29,10 @@ export default function MobileNav() {
       })}
       <div className="ml-auto flex shrink-0 items-center gap-1">
         <button type="button" onClick={exportBackup} className="rounded-xl p-2 text-soft hover:text-white" title="Backup">
-          <Icon name="export-bold" size={18} />
+          <Icon name="export" size={18} />
         </button>
         <button type="button" onClick={lock} className="rounded-xl p-2 text-soft hover:text-red-400" title="Lock now">
-          <Icon name="lock-keyhole-linear" size={18} />
+          <Icon name="lock-keyhole" size={18} />
         </button>
       </div>
     </div>

@@ -22,7 +22,7 @@ export default function AppShell({ children }) {
           role="alert"
           className="anim-rise fixed bottom-6 left-1/2 z-[70] flex -translate-x-1/2 items-center gap-3 rounded-2xl border border-red-500/40 bg-raised px-5 py-3 text-[13px] font-semibold text-red-300 shadow-2xl"
         >
-          <Icon name="close-circle-linear" size={18} />
+          <Icon name="close-circle" size={18} />
           {saveError}
         </div>
       ) : null}

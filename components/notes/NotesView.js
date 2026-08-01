@@ -146,7 +146,7 @@ function ChecklistRow({ item, mode = 'edit', onToggle, onText, onRemove, compact
           }}
           className="-mr-1 mt-[1px] p-1 text-muted opacity-0 transition-opacity hover:text-red-400 group-hover/item:opacity-100"
         >
-          <Icon name="close-circle-linear" size={17} />
+          <Icon name="close-circle" size={17} />
         </button>
       ) : null}
     </div>
@@ -354,7 +354,7 @@ export default function NotesView() {
     <>
       <PageHeader title="My Workspace" subtitle="All notes are encrypted and safely stored on this device.">
         <div className="hidden w-64 items-center rounded-[14px] border border-edge bg-surface px-4 py-2.5 transition-all focus-within:border-[#555] focus-within:ring-4 focus-within:ring-white/5 sm:flex">
-          <Icon name="magnifer-linear" size={18} className="mr-2.5 text-muted" />
+          <Icon name="magnifer" size={18} className="mr-2.5 text-muted" />
           <input
             value={query}
             onChange={(e) => setQuery(e.target.value)}
@@ -368,7 +368,7 @@ export default function NotesView() {
           title="Change view"
           className="keep-btn keep-btn-outline px-2.5"
         >
-          <Icon name={view === 'grid' ? 'list-linear' : 'gallery-minimalistic-linear'} size={22} />
+          <Icon name={view === 'grid' ? 'list' : 'gallery-minimalistic'} size={22} />
         </button>
       </PageHeader>
 
@@ -423,7 +423,7 @@ export default function NotesView() {
                     />
 
                     <div className="mt-2 flex items-start gap-3 rounded-lg py-1 text-muted">
-                      <Icon name="add-circle-linear" size={19} className="mt-[3px]" />
+                      <Icon name="add-circle" size={19} className="mt-[3px]" />
                       <div
                         ref={newItemRef}
                         contentEditable
@@ -448,7 +448,7 @@ export default function NotesView() {
                           listMode ? 'bg-hover text-white' : ''
                         }`}
                       >
-                        <Icon name="checklist-minimalistic-linear" size={22} />
+                        <Icon name="checklist-minimalistic" size={22} />
                       </button>
                     </div>
                     <button
@@ -470,7 +470,7 @@ export default function NotesView() {
         {filtered.length === 0 ? (
           <div className="flex w-full flex-col items-center justify-center py-16 opacity-80">
             <div className="mb-6 flex h-24 w-24 items-center justify-center rounded-[22px] border border-edge bg-surface shadow-lg">
-              <Icon name="document-add-linear" size={42} className="text-muted" />
+              <Icon name="document-add" size={42} className="text-muted" />
             </div>
             <h3 className="mb-1.5 text-[18px] font-semibold tracking-tight text-white">
               {query ? 'No matching notes found' : 'Your workspace is empty'}
@@ -529,7 +529,7 @@ export default function NotesView() {
                     }}
                     className="flex items-center justify-center rounded-lg p-1.5 text-soft transition-colors hover:bg-hover hover:text-white"
                   >
-                    <Icon name="pen-new-round-linear" size={18} />
+                    <Icon name="pen-new-round" size={18} />
                   </button>
                   <button
                     type="button"
@@ -540,7 +540,7 @@ export default function NotesView() {
                     }}
                     className="flex items-center justify-center rounded-lg p-1.5 text-soft transition-colors hover:bg-hover hover:text-red-400"
                   >
-                    <Icon name="trash-bin-minimalistic-linear" size={18} />
+                    <Icon name="trash-bin-minimalistic" size={18} />
                   </button>
                 </div>
               </div>
@@ -625,7 +625,7 @@ function EditNoteModal({ note, onClose, onSave }) {
               />
 
               <div className="mt-2 flex items-start gap-3 py-1 text-muted">
-                <Icon name="add-circle-linear" size={19} className="mt-[3px]" />
+                <Icon name="add-circle" size={19} className="mt-[3px]" />
                 <div
                   ref={newItemRef}
                   contentEditable
@@ -657,7 +657,7 @@ function EditNoteModal({ note, onClose, onSave }) {
                 isList ? 'bg-hover text-white' : ''
               }`}
             >
-              <Icon name="checklist-minimalistic-linear" size={21} />
+              <Icon name="checklist-minimalistic" size={21} />
             </button>
           </div>
           <div className="flex gap-3">

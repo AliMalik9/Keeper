@@ -3,10 +3,10 @@ import SOLAR_ICONS from '@/lib/solar-icons';
 /**
  * Renders a Solar icon from the generated subset in lib/solar-icons.js.
  *
- *   <Icon name="notes-minimalistic-bold" size={20} />
+ *   <Icon name="notes-minimalistic" size={20} />
  *
- * Icons inherit the current text colour. Linear variants are stroked with
- * currentColor by the Solar artwork itself, so nothing else is needed.
+ * The generated registry is locked to Solar's Bold Duotone style. Icons
+ * inherit the current text colour from their parent.
  */
 export default function Icon({ name, size = 20, className = '', title, ...rest }) {
   const icon = SOLAR_ICONS[name];

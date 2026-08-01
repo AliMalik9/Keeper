@@ -74,11 +74,11 @@ export default function BoardView() {
         }
       >
         <Link href="/planner" className="keep-btn keep-btn-outline">
-          <Icon name="clock-circle-linear" size={18} />
+          <Icon name="clock-circle" size={18} />
           <span className="hidden sm:block">Open planner</span>
         </Link>
         <button type="button" onClick={() => setDraft(emptyDraft())} className="keep-btn keep-btn-primary">
-          <Icon name="add-square-linear" size={18} /> Add Card
+          <Icon name="add-square" size={18} /> Add Card
         </button>
       </PageHeader>
 
@@ -164,7 +164,7 @@ function TaskCard({ task, dragging, onDragStart, onDragEnd, onEdit, onDelete }) 
         }}
         className="absolute right-3 top-3 z-10 flex h-7 w-7 items-center justify-center rounded-full border border-edge bg-surface/90 text-soft opacity-0 shadow-sm backdrop-blur transition-all hover:text-red-400 group-hover:opacity-100"
       >
-        <Icon name="trash-bin-minimalistic-linear" size={15} />
+        <Icon name="trash-bin-minimalistic" size={15} />
       </button>
 
       {task.image ? (
@@ -187,7 +187,7 @@ function TaskCard({ task, dragging, onDragStart, onDragEnd, onEdit, onDelete }) 
 
       {scheduled ? (
         <div className="mt-3 flex items-center gap-2 rounded-xl border border-edge bg-[#0a0a0a] px-3 py-2">
-          <Icon name="alarm-linear" size={15} className="text-white" />
+          <Icon name="alarm" size={15} className="text-white" />
           <span className="text-[12px] font-semibold tabular-nums text-white">
             {fmtTime12(task.start)} – {fmtTime12(task.end)}
           </span>
@@ -204,7 +204,7 @@ function TaskCard({ task, dragging, onDragStart, onDragEnd, onEdit, onDelete }) 
             onClick={(e) => e.stopPropagation()}
             className="inline-flex items-center gap-1.5 rounded-full border border-edge bg-[#0a0a0a] px-3 py-1.5 text-xs font-semibold text-neutral-200 transition-colors hover:bg-hover"
           >
-            <Icon name="link-minimalistic-2-linear" size={14} className="text-muted" />
+            <Icon name="link-minimalistic-2" size={14} className="text-muted" />
             Resource link
           </a>
         </div>
@@ -247,7 +247,7 @@ function CardModal({ draft, setDraft, onClose, onSave }) {
             onClick={onClose}
             className="flex h-8 w-8 items-center justify-center rounded-full border border-edge bg-raised text-soft transition-colors hover:text-white"
           >
-            <Icon name="close-circle-linear" size={18} />
+            <Icon name="close-circle" size={18} />
           </button>
         </div>
 
@@ -278,7 +278,7 @@ function CardModal({ draft, setDraft, onClose, onSave }) {
                 ))}
               </select>
               <Icon
-                name="alt-arrow-down-linear"
+                name="alt-arrow-down"
                 size={18}
                 className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-muted"
               />
@@ -300,7 +300,7 @@ function CardModal({ draft, setDraft, onClose, onSave }) {
           <div className="rounded-panel border border-edge bg-[#0a0a0a] p-5">
             <label className="flex cursor-pointer select-none items-center gap-3">
               <input type="checkbox" checked={scheduled} onChange={toggleSchedule} className="mt-0" />
-              <Icon name="alarm-linear" size={17} className={scheduled ? 'text-white' : 'text-muted'} />
+              <Icon name="alarm" size={17} className={scheduled ? 'text-white' : 'text-muted'} />
               <span className={`text-[14px] font-semibold ${scheduled ? 'text-white' : 'text-soft'}`}>Time duration</span>
               {scheduled ? (
                 <span className="ml-auto text-[12px] font-bold tabular-nums text-white">{fmtDur(durationOf(draft))}</span>
@@ -310,7 +310,7 @@ function CardModal({ draft, setDraft, onClose, onSave }) {
             {scheduled ? (
               <div className="mt-4 grid grid-cols-[1fr_auto_1fr] items-center gap-2">
                 <TimePicker value={draft.start} placeholder="Start" onChange={setStart} />
-                <Icon name="arrow-right-linear" size={16} className="text-muted" />
+                <Icon name="arrow-right" size={16} className="text-muted" />
                 <TimePicker value={draft.end} placeholder="End" onChange={setEnd} />
               </div>
             ) : null}

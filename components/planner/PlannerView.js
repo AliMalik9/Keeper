@@ -209,7 +209,7 @@ export default function PlannerView() {
             title="Undo · Ctrl+Z"
             className="keep-btn keep-btn-outline px-2.5 disabled:pointer-events-none disabled:opacity-30"
           >
-            <Icon name="undo-left-round-linear" size={18} />
+            <Icon name="undo-left-round" size={18} />
           </button>
           <button
             type="button"
@@ -218,11 +218,11 @@ export default function PlannerView() {
             title="Redo · Ctrl+Shift+Z"
             className="keep-btn keep-btn-outline px-2.5 disabled:pointer-events-none disabled:opacity-30"
           >
-            <Icon name="undo-right-round-linear" size={18} />
+            <Icon name="undo-right-round" size={18} />
           </button>
         </div>
         <button type="button" onClick={exportPng} className="keep-btn keep-btn-outline">
-          <Icon name="download-minimalistic-linear" size={18} />
+          <Icon name="download-minimalistic" size={18} />
           <span className="hidden sm:block">Export PNG</span>
         </button>
       </PageHeader>
@@ -264,10 +264,10 @@ export default function PlannerView() {
 
           <div className="border-t border-edge p-4">
             <button type="button" onClick={addActivity} className="keep-btn keep-btn-primary w-full">
-              <Icon name="add-square-linear" size={16} /> Add block
+              <Icon name="add-square" size={16} /> Add block
             </button>
             <Link href="/board" className="keep-btn keep-btn-ghost mt-2 w-full">
-              <Icon name="widget-4-linear" size={16} /> Schedule from board
+              <Icon name="widget-4" size={16} /> Schedule from board
             </Link>
           </div>
         </div>
@@ -326,7 +326,7 @@ function BlockCard({ block, selected, conflicted, onSelect, onPatch, onDuplicate
             onClick={onDuplicate}
             className="shrink-0 p-1 text-soft opacity-0 transition-opacity hover:text-white group-hover:opacity-60"
           >
-            <Icon name="copy-linear" size={15} />
+            <Icon name="copy" size={15} />
           </button>
         ) : null}
 
@@ -336,13 +336,13 @@ function BlockCard({ block, selected, conflicted, onSelect, onPatch, onDuplicate
           onClick={onRemove}
           className="shrink-0 p-1 text-soft opacity-0 transition-opacity hover:text-red-400 group-hover:opacity-60"
         >
-          <Icon name="trash-bin-minimalistic-linear" size={15} />
+          <Icon name="trash-bin-minimalistic" size={15} />
         </button>
       </div>
 
       <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-2">
         <TimePicker value={block.start} onChange={(v) => onPatch({ start: v })} />
-        <Icon name="arrow-right-linear" size={14} className="text-muted" />
+        <Icon name="arrow-right" size={14} className="text-muted" />
         <TimePicker value={block.end} onChange={(v) => onPatch({ end: v })} />
       </div>
 
@@ -353,7 +353,7 @@ function BlockCard({ block, selected, conflicted, onSelect, onPatch, onDuplicate
             onClick={(e) => e.stopPropagation()}
             className="flex items-center gap-1.5 rounded-full border border-edge bg-[#0a0a0a] px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-soft transition-colors hover:text-white"
           >
-            <Icon name="widget-4-linear" size={12} /> Board card
+            <Icon name="widget-4" size={12} /> Board card
           </Link>
         ) : (
           <div className="flex items-center gap-1.5">

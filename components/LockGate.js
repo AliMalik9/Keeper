@@ -100,7 +100,7 @@ export default function LockGate({ children }) {
         >
           <div className="flex w-full max-w-md flex-col items-center rounded-pill border border-edge bg-surface p-10 shadow-2xl">
             <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl border border-edgeStrong bg-raised text-white">
-              <Icon name="lock-password-bold" size={24} />
+              <Icon name="lock-password" size={24} />
             </div>
 
             <h2 className="mb-2 text-center text-[22px] font-bold text-white">{title}</h2>
@@ -152,7 +152,7 @@ export default function LockGate({ children }) {
                   onClick={() => fileRef.current?.click()}
                   className="flex w-full items-center justify-center gap-2 text-[14px] font-medium text-neutral-300 transition-colors hover:text-white"
                 >
-                  <Icon name="import-bold" size={18} /> Import backup file (.keep)
+                  <Icon name="import" size={18} /> Import backup file (.keep)
                 </button>
                 <input ref={fileRef} type="file" accept=".keep" className="hidden" onChange={onFile} />
               </div>
